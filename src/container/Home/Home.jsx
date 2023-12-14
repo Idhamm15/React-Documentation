@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import YouTubeComp from "../../component/YouTubeComp/YouTubeComp";
 // import Product from "../Product/Product";
 import LifeCycleComp from "../LifeCycleComp/LifeCycleComp";
+import BlogPost from "../BlogPost/BlogPost";
 
 class Home extends Component {
     state = {
@@ -35,9 +36,13 @@ class Home extends Component {
                 {/* <p>Counter</p>
                 <hr/>
                 <Product/> */}
-                <p>LifeCycle Component</p>
+                {/* <p>LifeCycle Component</p>
                 <hr/>
-                <LifeCycleComp/>
+                <LifeCycleComp/> */}
+
+                <p>Blog Post</p>
+                <hr />
+                <BlogPost/>
             </div>
         )
     }

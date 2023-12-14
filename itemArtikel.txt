@@ -1,0 +1,5 @@
+judul
+isiArtikel1
+isiArtikel2
+gambar1
+gambar2
