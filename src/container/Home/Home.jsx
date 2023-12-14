@@ -4,6 +4,14 @@ import React, { Component } from "react";
 import LifeCycleComp from "../LifeCycleComp/LifeCycleComp";
 
 class Home extends Component {
+    state = {
+        showComponent: true
+    }
+
+    componentDidMount(){
+
+    }
+    
     render () {
         return (
             <div>
