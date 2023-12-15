@@ -41,7 +41,6 @@ class BlogPost extends Component {
                     return <Post key={post.id} data={post} remove={this.handleRemove}  />
                 })
             }  
-            <Post/>  
             </Fragment>
         )
     }
