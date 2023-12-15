@@ -23,7 +23,7 @@ class BlogPost extends Component {
 
     // Get API menggunakan Axios data
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('http://localhost:3000/posts')
         .then((result) => {
             this.setState({
                 post: result.data
