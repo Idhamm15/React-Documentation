@@ -10,25 +10,25 @@ class BlogPost extends Component {
         post : []
     }
 
-    // Get API menggunakan fetching data
-    // componentDidMount() {
-    //     fetch('https://jsonplaceholder.typicode.com/posts')
-    //     .then(response => response.json())
-    //     .then(json => {
-    //         this.setState({
-    //             post : json
-    //         })
-    //     })
-    // }
-
-    // Get API menggunakan Axios data
-    componentDidMount() {
+    getPostAPI=()=>{
         axios.get('http://localhost:3000/posts')
         .then((result) => {
             this.setState({
                 post: result.data
             })
         })
+    }
+
+    // handle Remove
+    handleRemove = (data) => {
+        axios.delete(`http://localhost:3000/posts/${data}`).then((res)=>{
+            this.getPostAPI()
+        })
+    }
+
+    // Get API menggunakan Axios data
+    componentDidMount() {
+        this.getPostAPI();
     }
 
 
@@ -38,7 +38,7 @@ class BlogPost extends Component {
             <p className="section-title">Blog Post</p>
             {
                 this.state.post.map(post => {
-                    return <Post key={post.id} title={post.title} desc={post.body} />
+                    return <Post key={post.id} data={post} remove={this.handleRemove}  />
                 })
             }  
             <Post/>  
